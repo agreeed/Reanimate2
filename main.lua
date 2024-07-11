@@ -77,6 +77,10 @@ local function gp(parent, name, className)
 	return nil
 end
 
+local hat = gp(c, "LongStraightHair", "Accessory")
+local handle = gp(hat, "Handle", "BasePart")
+handle.Mesh:Destroy()
+
 local hat2 = gp(c, "Kate Hair", "Accessory")
 local handle2 = gp(hat2, "Handle", "BasePart")
 handle2.Mesh:Destroy()
@@ -1268,7 +1272,6 @@ end
 
 local hat = gp(cplayer, "LongStraightHair", "Accessory")
 local handle = gp(hat, "Handle", "BasePart")
-handle.SpecialMesh:Destroy()
 local att = gp(handle, "att1_Handle", "Attachment")
 att.Parent = gun
 --att.Rotation = v3(-90, -60, 270)
