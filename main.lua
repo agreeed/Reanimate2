@@ -25,12 +25,12 @@ local antiragdoll = true --removes hingeConstraints and ballSocketConstraints fr
 local newanimate = true --disables the animate script and enables after reanimation
 local discharscripts = true --disables all localScripts parented to your character before reanimation
 local R15toR6 = true --tries to convert your character to r6 if its r15
-local hatcollide = false --makes hats cancollide (credit to ShownApe) (works only with reanimate method 0)
+local hatcollide = true --makes hats cancollide (credit to ShownApe) (works only with reanimate method 0)
 local humState16 = true --enables collisions for limbs before the humanoid dies (using hum:ChangeState)
 local addtools = false --puts all tools from backpack to character and lets you hold them after reanimation
 local hedafterneck = true --disable aligns for head and enable after neck or torso is removed
 local loadtime = game:GetService("Players").RespawnTime + 0.5 --anti respawn delay
-local method = 3 --reanimation method
+local method = 0 --reanimation method
 --methods:
 --0 - breakJoints (takes [loadtime] seconds to laod)
 --1 - limbs
@@ -1266,7 +1266,7 @@ local function gp(parent, name, className)
 end
 
 
-local hat = gp(cplayer, "BoySpaceHair", "Accessory")
+local hat = gp(cplayer, "LongStraightHair", "Accessory")
 local handle = gp(hat, "Handle", "BasePart")
 local att = gp(handle, "att1_Handle", "Attachment")
 att.Parent = gun
