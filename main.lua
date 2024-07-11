@@ -1268,6 +1268,7 @@ end
 
 local hat = gp(cplayer, "LongStraightHair", "Accessory")
 local handle = gp(hat, "Handle", "BasePart")
+handle.SpecialMesh:Destroy()
 local att = gp(handle, "att1_Handle", "Attachment")
 att.Parent = gun
 --att.Rotation = v3(-90, -60, 270)
