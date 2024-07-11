@@ -937,8 +937,7 @@ local sine = 0
 local change = 1
 local doe = 0
 
-FELOADLIBRARY = {}
-loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
+FELOADLIBRARY = loadstring(game:HttpGet("https://github.com/agreeed/Reanimate2/raw/main/feloadlibrary.lua"))()
 
 local Create = FELOADLIBRARY.Create
 Humanoid.WalkSpeed = 16
